@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: preview_match_designer
+  server:
+    port: 8081
+  jpa:
+    show-sql: true
+    generate-ddl: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/match_design
+    username: match_design
+    password: password
+  flyway:
+    schemas:
+      - public
