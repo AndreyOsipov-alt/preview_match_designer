@@ -21,6 +21,6 @@ public class EmailController {
     @PostMapping(path = "/send")
     public String sendEmail(@RequestBody RequestEmail request) {
         log.info("controller: " + request.getEmail());
-        return  userEmailService.saveUserEmail(request.getEmail());
+        return  userEmailService.saveUserEmail(request);
     }
 }
