@@ -22,6 +22,7 @@ create table user_management.t_user_authority
 create table user_management.t_user_email
 (id serial primary key,
 c_email varchar not null check ( length(trim(c_email)) >0 ),
-c_user_id varchar);
+C_description varchar
+);
 
 

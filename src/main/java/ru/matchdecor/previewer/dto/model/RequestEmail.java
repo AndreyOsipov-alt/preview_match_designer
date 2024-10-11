@@ -6,4 +6,5 @@ import lombok.Data;
 public class RequestEmail {
 
     private String email;
+    private String description;
 }

@@ -1,6 +1,8 @@
 package ru.matchdecor.previewer.logic;
 
+import ru.matchdecor.previewer.dto.model.RequestEmail;
+
 public interface UserEmailService {
 
-    String saveUserEmail(String email);
+    String saveUserEmail(RequestEmail request);
 }

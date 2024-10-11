@@ -15,6 +15,7 @@ public class UserEmail {
     @Column(name = "c_email")
     private String email;
 
-    @Column(name = "c_user_id")
-    private String userId;
+    @Column(name = "c_description")
+    private String description;
+
 }
