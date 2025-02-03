@@ -1,8 +1,6 @@
 spring:
   application:
     name: preview_match_designer
-  server:
-    port: 8081
   jpa:
     show-sql: true
     generate-ddl: true
@@ -10,6 +8,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/match_design
     username: match_design
     password: password
+    driver-class-name: org.postgresql.Driver
   flyway:
     schemas:
       - public
+
+
+server:
+  port: 8081
+search:
+  url:
+    plumbing: https://santehnika-online.ru

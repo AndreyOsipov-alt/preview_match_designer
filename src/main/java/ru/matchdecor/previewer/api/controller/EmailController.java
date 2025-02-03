@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.matchdecor.previewer.dto.model.RequestEmail;
-import ru.matchdecor.previewer.logic.UserEmailService;
+import ru.matchdecor.previewer.logic.service.UserEmailService;
 
 @RestController
 @RequestMapping(value = "/email")
