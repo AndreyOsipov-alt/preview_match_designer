@@ -18,4 +18,8 @@ server:
   port: 8081
 search:
   url:
-    plumbing: https://santehnika-online.ru
+    plumbing:
+      santehnika-online: https://santehnika-online.ru
+      vseinstrumenti: https://www.vseinstrumenti.ru
+
+

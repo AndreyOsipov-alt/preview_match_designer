@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.matchdecor.previewer.dto.model.RequestSearch;
+import ru.matchdecor.previewer.dto.model.ResponceSearch;
 import ru.matchdecor.previewer.logic.manager.SearchManager;
+import ru.matchdecor.previewer.logic.service.SearchService;
 
 /**
  * @author aosipov
@@ -22,12 +23,17 @@ import ru.matchdecor.previewer.logic.manager.SearchManager;
 @RequiredArgsConstructor
 @Slf4j
 public class SearchController {
-    private final SearchManager searchManager;
+
+    private final SearchService searchService;
+    private  final SearchManager searchManager;
 
     @PostMapping(path = "/{searchString}")
-    public ResponseEntity<List<RequestSearch>> search(@PathVariable String searchString) {
-        //TODO получение списка перенести в SearchServiceImpl там уже добавить фильтрацию и сортировку, здесь вызывать searchService
-       return ResponseEntity.ok(searchManager.plumbingSearch(searchString));
+    public ResponseEntity<List<ResponceSearch>> search(@PathVariable String searchString) {
+       return ResponseEntity.ok(searchService.search(searchString));
+    }
 
+    @PostMapping(path = "/testSearch/{searchString}")
+    public ResponseEntity<List<ResponceSearch>> testSearch(@PathVariable String searchString) {
+        return ResponseEntity.ok(searchManager.plumbingSearchSantOnline(searchString));
     }
 }
